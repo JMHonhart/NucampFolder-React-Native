@@ -194,6 +194,7 @@ const Main = () => {
                     component={HomeNavigator}
                     options={{
                         title: 'Home',
+                        headerShown: false,
                         drawerIcon: ({ color }) => (
                             <Icon
                                 name='home'
@@ -206,10 +207,11 @@ const Main = () => {
                     }}
                 />
                 <Drawer.Screen
-                    name='Directory'
+                    name='directory'
                     component={DirectoryNavigator}
                     options={{
                         title: 'Campsite Directory',
+                        headerShown: false,
                         drawerIcon: ({ color }) => (
                             <Icon
                                 name='list'
@@ -222,10 +224,11 @@ const Main = () => {
                     }}
                 />
                 <Drawer.Screen
-                    name='ReserveCampsite'
+                    name='reserveCampsite'
                     component={ReservationNavigator}
                     options={{
                         title: 'Reserve Campsite',
+                        headerShown: false,
                         drawerIcon: ({ color }) => (
                             <Icon
                                 name='tree'
@@ -242,6 +245,7 @@ const Main = () => {
                     component={AboutNavigator}
                     options={{
                         title: 'About',
+                        headerShown: false,
                         drawerIcon: ({ color }) => (
                             <Icon
                                 name='info-circle'
@@ -258,6 +262,7 @@ const Main = () => {
                     component={ContactNavigator}
                     options={{
                         title: 'Contact Us',
+                        headerShown: false,
                         drawerIcon: ({ color }) => (
                             <Icon
                                 name='address-card'
