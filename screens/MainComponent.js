@@ -147,7 +147,7 @@ const DirectoryNavigator = () => {
     const Stack = createStackNavigator();
     return (
         <Stack.Navigator
-            initialRouteName='Directory'
+            initialRouteName='directory'
             screenOptions={screenOptions}
         >
             <Stack.Screen
@@ -262,7 +262,7 @@ const Main = () => {
                     }}
                 />
                 <Drawer.Screen
-                    name='Favorites'
+                    name='favorites'
                     component={FavoritesNavigator}
                     options={{
                         title: 'My Favorites',
@@ -278,7 +278,7 @@ const Main = () => {
                     }}
                 />
                 <Drawer.Screen
-                    name='About'
+                    name='about'
                     component={AboutNavigator}
                     options={{
                         title: 'About',
