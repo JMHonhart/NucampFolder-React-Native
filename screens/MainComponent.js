@@ -34,7 +34,7 @@ const HomeNavigator = () => {
     return (
         <Stack.Navigator screenOptions={screenOptions}>
             <Stack.Screen
-                name='home'
+                name='Home'
                 component={HomeScreen}
                 options={({ navigation }) => ({
                     title: 'Home',
