@@ -147,11 +147,11 @@ const DirectoryNavigator = () => {
     const Stack = createStackNavigator();
     return (
         <Stack.Navigator
-            initialRouteName='directory'
+            initialRouteName='Directory'
             screenOptions={screenOptions}
         >
             <Stack.Screen
-                name='Directory'
+                name='directory'
                 component={DirectoryScreen}
                 options={({ navigation }) => ({
                     title: 'Campsite Directory',
@@ -294,7 +294,7 @@ const Main = () => {
                     }}
                 />
                 <Drawer.Screen
-                    name='Contact'
+                    name='contact'
                     component={ContactNavigator}
                     options={{
                         title: 'Contact Us',
