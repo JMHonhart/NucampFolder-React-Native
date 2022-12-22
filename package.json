@@ -11,6 +11,7 @@
   "dependencies": {
     "@expo/cli": "^0.4.10",
     "@expo/prebuild-config": "^5.0.5",
+    "@react-native-async-storage/async-storage": "~1.17.3",
     "@react-native-community/datetimepicker": "6.5.2",
     "@react-native-community/masked-view": "^0.1.11",
     "@react-native-picker/picker": "2.4.8",
@@ -37,7 +38,8 @@
     "react-native-screens": "~3.18.0",
     "react-native-swipe-list-view": "^3.2.9",
     "react-redux": "^8.0.5",
-    "redux": "^4.2.0"
+    "redux": "^4.2.0",
+    "redux-persist": "^6.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3"
