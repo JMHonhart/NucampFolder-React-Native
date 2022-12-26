@@ -21,6 +21,7 @@ import { fetchCampsites } from '../features/campsites/campsitesSlice';
 import { fetchPromotions } from '../features/promotions/promotionsSlice';
 import { fetchComments } from '../features/comments/commentsSlice';
 import FavoritesScreen from './FavoritesScreen';
+import LoginScreen from './LoginScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -143,6 +144,28 @@ const FavoritesNavigator = () => {
     );
 };
 
+const LoginNavigator = () => {
+    const Stack = createStackNavigator();
+    return (
+        <Stack.Navigator screenOptions={screenOptions}>
+            <Stack.Screen
+                name='Login'
+                component={LoginScreen}
+                options={({ navigation }) => ({
+                    headerLeft: () => (
+                        <Icon
+                            name='sign-in'
+                            type='font-awesome'
+                            iconStyle={styles.stackIcon}
+                            onPress={() => navigation.toggleDrawer()}
+                        />
+                    )
+                })}
+            />
+        </Stack.Navigator>
+    );
+};
+
 const DirectoryNavigator = () => {
     const Stack = createStackNavigator();
     return (
@@ -151,7 +174,7 @@ const DirectoryNavigator = () => {
             screenOptions={screenOptions}
         >
             <Stack.Screen
-                name='directory'
+                name='Directory'
                 component={DirectoryScreen}
                 options={({ navigation }) => ({
                     title: 'Campsite Directory',
@@ -214,7 +237,22 @@ const Main = () => {
                 drawerStyle={{ backgroundColor: '#CEC8FF' }}
             >
                 <Drawer.Screen
-                    name='home'
+                    name='Login'
+                    component={LoginNavigator}
+                    options={{
+                        drawerIcon: ({ color }) => (
+                            <Icon
+                                name='sign-in'
+                                type='font-awesome'
+                                size={24}
+                                iconStyle={{ width: 24 }}
+                                color={color}
+                            />
+                        )
+                    }}
+                />
+                <Drawer.Screen
+                    name='Home'
                     component={HomeNavigator}
                     options={{
                         title: 'Home',
@@ -262,7 +300,7 @@ const Main = () => {
                     }}
                 />
                 <Drawer.Screen
-                    name='favorites'
+                    name='Favorites'
                     component={FavoritesNavigator}
                     options={{
                         title: 'My Favorites',
@@ -278,7 +316,7 @@ const Main = () => {
                     }}
                 />
                 <Drawer.Screen
-                    name='about'
+                    name='About'
                     component={AboutNavigator}
                     options={{
                         title: 'About',
@@ -294,7 +332,7 @@ const Main = () => {
                     }}
                 />
                 <Drawer.Screen
-                    name='contact'
+                    name='Contact'
                     component={ContactNavigator}
                     options={{
                         title: 'Contact Us',
