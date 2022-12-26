@@ -36,19 +36,8 @@ import NetInfo from '@react-native-community/netinfo';
 const Drawer = createDrawerNavigator();
 
 const screenOptions = {
-    "tabBarActiveTintColor": "#fff",
-    "tabBarInactiveTintColor": "#808080",
-    "tabBarActiveBackgroundColor": "#5637DD",
-    "tabBarInactiveBackgroundColor": "#CEC8FF",
-    "tabBarLabelStyle": {
-        "fontSize": 16
-    },
-    "tabBarStyle": [
-        {
-            "display": "flex"
-        },
-        null
-    ]
+    headerTintColor: '#fff',
+    headerStyle: { backgroundColor: '#5637DD' }
 };
 
 const HomeNavigator = () => {
@@ -56,7 +45,7 @@ const HomeNavigator = () => {
     return (
         <Stack.Navigator screenOptions={screenOptions}>
             <Stack.Screen
-                name='home'
+                name='Home'
                 component={HomeScreen}
                 options={({ navigation }) => ({
                     title: 'Home',
@@ -308,7 +297,7 @@ const Main = () => {
                 drawerStyle={{ backgroundColor: '#CEC8FF' }}
             >
                 <Drawer.Screen
-                    name='login'
+                    name='Login'
                     component={LoginNavigator}
                     options={{
                         drawerIcon: ({ color }) => (
@@ -323,7 +312,7 @@ const Main = () => {
                     }}
                 />
                 <Drawer.Screen
-                    name='home'
+                    name='Home'
                     component={HomeNavigator}
                     options={{
                         title: 'Home',
