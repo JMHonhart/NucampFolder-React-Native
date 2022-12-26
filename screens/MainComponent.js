@@ -45,7 +45,7 @@ const HomeNavigator = () => {
     return (
         <Stack.Navigator screenOptions={screenOptions}>
             <Stack.Screen
-                name='Home'
+                name='home'
                 component={HomeScreen}
                 options={({ navigation }) => ({
                     title: 'Home',
@@ -159,7 +159,7 @@ const LoginNavigator = () => {
     return (
         <Stack.Navigator screenOptions={screenOptions}>
             <Stack.Screen
-                name='Login'
+                name='login'
                 component={LoginScreen}
                 options={({ navigation, route }) => ({
                     headerTitle: getFocusedRouteNameFromRoute(route),
@@ -167,7 +167,7 @@ const LoginNavigator = () => {
                         <Icon
                             name={
                                 getFocusedRouteNameFromRoute(route) ===
-                                'Register'
+                                    'Register'
                                     ? 'user-plus'
                                     : 'sign-in'
                             }
@@ -243,14 +243,14 @@ const Main = () => {
         NetInfo.fetch().then((connectionInfo) => {
             Platform.OS === 'ios'
                 ? Alert.alert(
-                      'Initial Network Connectivity Type:',
-                      connectionInfo.type
-                  )
+                    'Initial Network Connectivity Type:',
+                    connectionInfo.type
+                )
                 : ToastAndroid.show(
-                      'Initial Network Connectivity Type: ' +
-                          connectionInfo.type,
-                      ToastAndroid.LONG
-                  );
+                    'Initial Network Connectivity Type: ' +
+                    connectionInfo.type,
+                    ToastAndroid.LONG
+                );
         });
 
         const unsubscribeNetInfo = NetInfo.addEventListener(
@@ -297,7 +297,7 @@ const Main = () => {
                 drawerStyle={{ backgroundColor: '#CEC8FF' }}
             >
                 <Drawer.Screen
-                    name='Login'
+                    name='login'
                     component={LoginNavigator}
                     options={{
                         drawerIcon: ({ color }) => (
@@ -312,7 +312,7 @@ const Main = () => {
                     }}
                 />
                 <Drawer.Screen
-                    name='Home'
+                    name='home'
                     component={HomeNavigator}
                     options={{
                         title: 'Home',
