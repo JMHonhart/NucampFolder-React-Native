@@ -36,8 +36,19 @@ import NetInfo from '@react-native-community/netinfo';
 const Drawer = createDrawerNavigator();
 
 const screenOptions = {
-    headerTintColor: '#fff',
-    headerStyle: { backgroundColor: '#5637DD' }
+    "tabBarActiveTintColor": "#fff",
+    "tabBarInactiveTintColor": "#808080",
+    "tabBarActiveBackgroundColor": "#5637DD",
+    "tabBarInactiveBackgroundColor": "#CEC8FF",
+    "tabBarLabelStyle": {
+        "fontSize": 16
+    },
+    "tabBarStyle": [
+        {
+            "display": "flex"
+        },
+        null
+    ]
 };
 
 const HomeNavigator = () => {
