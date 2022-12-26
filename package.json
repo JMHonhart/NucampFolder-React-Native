@@ -44,7 +44,8 @@
     "react-redux": "^8.0.5",
     "redux": "^4.2.0",
     "redux-persist": "^6.0.0",
-    "expo-image-picker": "~14.0.2"
+    "expo-image-picker": "~14.0.2",
+    "@react-native-community/netinfo": "9.3.5"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3"
